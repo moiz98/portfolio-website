@@ -1,0 +1,141 @@
+.aboutDescription{
+    position: relative;
+    display: flex;
+    height: 100%;
+    font-family: "Signika", sans-serif;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: rgb(240, 240, 241);
+
+    @media (max-width: 540px) { padding-top: 0px; padding-bottom: 50px;}
+
+    .body{
+        margin-left: 150px;
+        margin-right: 150px;
+        position: relative;
+        width: 100vw;
+
+        @media (max-width: 1024px) {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        @media (max-width: 900px) {
+            margin-left: 75px;
+            margin-right: 75px;
+        }
+        @media (max-width: 768px) {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        @media (max-width: 540px) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+
+            @media (max-width: 540px) {
+                flex-direction: column;
+            }
+
+            .flexCol{
+                display: block;
+                width: 100%;
+                order: 2;
+                position: relative;
+
+                @media (max-width: 540px) { 
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                &:nth-child(1){
+                    width: 65%;
+                    @media (max-width: 540px) { width: 100%; }   
+                }
+
+                &:nth-child(2){
+                    width: 35%;
+                    text-align: -webkit-center;
+                }
+
+                .arrow{
+                    width: 20%;
+                    @media (max-width: 540px) { width: 10%; margin-bottom: 20px; scale: 0.75;}
+                }
+
+                .aboutText{
+                    width: 80%;
+                    text-align: left;
+                    
+                    @media (max-width: 540px) { width: 90%; }
+
+                    p{
+                        margin: 0px;
+                        &:nth-of-type(1){
+                            font-size: 1.2em;
+                            font-weight: 450;
+                            gap: 8px;
+                            line-height: 1.3;
+                            span{
+                                margin-right: 3px;
+                            }
+                            .mask{
+                                position: relative;
+                                overflow: hidden;
+                                display: inline-flex;
+                            }
+                        }
+                        &:nth-of-type(2){
+                            font-size: 1.2em;
+                            width: 80%;
+                            font-weight: 450;
+                        }
+                    }
+                }
+                .loading {
+                    font-size: 1.2em;
+                    padding-top: 20px;
+                    font-weight: bold;
+                    display:inline-block;
+                    opacity: 0.5;
+                    clip-path: inset(0 2ch 0 0);
+                    animation: l 2s steps(4) infinite;
+
+                    @media (max-width: 540px) {
+                        clip-path: inset(0 13ch 0 0);
+                        animation: l 2s steps(8) infinite;
+                    }
+                }
+                  
+                @keyframes l {
+                    to {
+                        clip-path: inset(0 -1ch 0 0)
+                    }
+                }
+
+                .imageContainer{
+                    width: 200px;
+                    height: 200px;
+                    position: relative;
+                    border-radius: 10%;
+                    overflow: hidden;
+                    
+                    @media (max-width: 1024px) {
+                        width: 150px;
+                        height: 150px;
+                        margin-top: 0px;
+                    }
+                    @media (max-width: 540px) {
+                        width: 250px;
+                        height: 250px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,145 @@
+.header{
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 0;
+    color: white;
+    padding: 35px;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 300;
+    box-sizing: border-box;
+    align-items: center;
+    z-index: 10;
+
+    .logo{
+        display: flex;
+        cursor: pointer;
+        font-family: "Marhey", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: xx-large;
+        a{
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        font-family: "Marhey", sans-serif;
+        .el{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+            padding: 15px;
+            cursor: pointer;
+            .indicator{
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                top: 45px;
+                left: 50%;
+                background-color: white;
+                border-radius: 50%;
+                transform: scale(0) translateX(-50%);
+                transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+            }
+        }
+        a{
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+        }
+    } 
+}
+.headerButtonContainer{
+    transform: scale(0);
+    position: fixed;
+    right: 0px;
+    z-index: 14;
+    
+    @media (max-width: 1024px) { right: 2vh; }
+    @media (max-width: 900px) { right: 2vh; }
+    @media (max-width: 768px) { right: 8vh; }
+    @media (max-width: 540px) { right: 2vh; }
+
+    .button{
+        position: relative;
+        margin: 20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #1C1D20;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        @media (max-width: 1024px) { width: 80px; height: 80px; }
+        @media (max-width: 900px) { width: 50px; height: 50px;}
+        @media (max-width: 768px) { width: 50px; height: 50px; }
+        @media (max-width: 540px) { width: 40px; height: 40px; }
+
+    }
+    
+    .burger{
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        &::after, &::before{
+            content: "";
+            display: block;
+            height: 1px;
+            width: 40%;
+            margin: auto;
+            background-color: white;
+            position: relative;
+            transition: transform 0.3s;
+        }
+    
+        &::after{
+            top: -5px;
+        }
+    
+        &::before{
+            top: 5px;
+        }
+    }
+    
+    .burgerActive{
+    
+        &::after{
+            transform: rotate(45deg);
+            top: -1px;
+        }
+    
+        &::before{
+            transform: rotate(-45deg);
+            top: 0px;
+        }
+        
+    }
+}
+.dark{
+    color: black;
+    .logo{
+        a{
+            color: black;
+        }
+    }
+    .nav{
+        .el{
+            .indicator{
+                background-color: black;
+            }
+        }
+        a{
+            color: black;
+        }
+    }
+}
+

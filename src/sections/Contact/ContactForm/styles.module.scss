@@ -1,0 +1,271 @@
+.contactForm {
+    position: relative;
+    display: flex;
+    height: 100%;
+    font-family: "Signika", sans-serif;
+    background: #1C1D20;
+    padding-top: 100px;
+    
+    .body{
+        margin-left: 200px;
+        margin-right: 200px;
+        position: relative;
+        width: 100vw;
+        background: #1C1D20;
+
+        @media (max-width: 1024px) {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        
+        @media (max-width: 540px) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .title{
+            display: flex;
+            align-items: center;
+            
+            :nth-child(1){
+                width: 75%;
+            }
+
+            @media (max-width: 1024px) {
+                align-items: flex-start;
+                margin-top: 100px;
+            }
+
+            @media (max-width: 540px) {
+                align-items: flex-start;
+                margin-top: 100px;
+            }
+
+            .column{
+                
+                h1{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 120px;
+                    margin: 0px;
+                    padding: 15px;
+                    font-weight: 300;
+                    color: white;
+                    
+                    @media (max-width: 1024px) {
+                        font-size: 60px;
+                    }
+                    @media (max-width: 540px) {
+                        font-size: 25px;
+                    }
+                    
+                }
+
+                .imageContainer{
+                    width: 200px;
+                    height: 200px;
+                    position: relative;
+                    border-radius: 10%;
+                    overflow: hidden;
+                    margin-top: 150px;
+                    
+                    @media (max-width: 1024px) {
+                        width: 150px;
+                        height: 150px;
+                        margin-top: 0px;
+                    }
+                    @media (max-width: 540px) {
+                        width: 75px;
+                        height: 75px;
+                        border-radius: 50%;
+                        margin-top: 0px;
+                    }
+                }
+
+                svg{
+                    padding: 10px;
+                    margin-top: 100px;
+                    
+                    @media (max-width: 540px) {
+                        margin-top: 10px;
+                        transform: scaleX(-1);
+                    }
+                }
+            }
+        }
+
+        .formDetails{
+            display: flex;
+
+            :nth-child(1){
+                width: 75%;
+            }
+
+            @media (max-width: 540px) {
+                flex-direction: column-reverse;
+
+                :nth-child(2){
+                    margin-bottom: 30px;
+                }
+            }
+
+            .column{
+
+                h5{
+                    font-size: 20px;
+                    margin: 0px;
+                    padding: 15px;
+                    font-weight: 100;
+                    color: white;
+                    opacity: 0.5;
+
+                    @media (max-width: 1024px) {
+                        font-size: 20px;
+                    }
+                    @media (max-width: 540px) {
+                        font-size: 15px;
+                    }
+                }
+
+                a{
+                    display: block;
+                    font-size: 30px;
+                    margin: 0px;
+                    padding: 5px 15px;
+                    font-weight: 100;
+                    color: white;
+                    text-decoration: none;
+
+                    @media (max-width: 1024px) {
+                        font-size: 25px;
+                    }
+
+                    @media (max-width: 540px) {
+                        font-size: 20px;
+                    }
+                    
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                
+                .form{
+                    display: block;
+                    
+                    .borderTop{
+                        border-top: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+
+                    .formCol{
+                        display: block;
+                        width: 100%;
+                        font-size: 1.33em;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                        padding: 0 2.75em;
+                        position: relative;
+
+                        h5{
+                            position: absolute;
+                            left: 0;
+                            top: 1.4em;
+                            opacity: .33;
+                            color: white;
+                        }
+                        .formLabel{
+                            width: 100%;
+                            display: block;
+                            margin-bottom: 0;
+                            color: white;
+                            font-weight: 450;
+                            padding-top: 1.66em;
+                            transition: all .2s ease-in-out;
+                        }
+
+                        .formField{
+                            appearance: none;
+                            -webkit-appearance: none;
+                            -webkit-box-shadow: none;
+                            -moz-box-shadow: none;
+                            box-shadow: none;
+                            width: 100%;
+                            padding: 1em 0 1em 0;
+                            border: 0;
+                            border-radius: 0;
+                            font-weight: 450;
+                            font-size: 1em;
+                            color: white;
+                            display: block;
+                            background: transparent !important;
+                        }
+                    }
+
+                    .buttonContainer{
+                        position: absolute;
+                        left: calc(100% - 750px); 
+                        top: calc(100% - 570px);
+                        
+                        @media (max-width: 1024px) {
+                            left: calc(100% - 500px); 
+                            top: calc(100% - 400px);
+                        }
+
+                        @media (max-width: 540px) {
+                            left: calc(100% - 200px); 
+                            top: calc(100% - 500px);
+                        }
+
+                    }
+                    .button{
+                        width: 180px;
+                        height: 180px;
+                        background-color: #455CE9; 
+                        color: white;
+                        text-align: center;
+                        border-radius: 50%;
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        
+                        @media (max-width: 540px) {
+                            width: 120px;
+                            height: 120px;
+                        }
+                        
+                        @media (max-width: 1024px) {
+                            width: 120px;
+                            height: 120px;
+                        }
+        
+                        .buttonText{
+                            margin: 0px;
+                            font-size: 16px;
+                            font-weight: 300;
+                            z-index: 2;
+                            width: 100%;
+                            height: 100%;
+                            border: 0px;
+                            color: white;
+                            position: relative;
+                            background: transparent !important;
+                            
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .SubmitMessage{
+            display: block;
+            margin-top: 100px;
+            color: white;
+            padding: 20px;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

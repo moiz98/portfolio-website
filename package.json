@@ -1,0 +1,36 @@
+{
+  "name": "next-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "engines" : { 
+    "npm" : ">=10.0.0",
+    "node" : ">=22.0.0"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.9",
+    "@vercel/analytics": "^1.4.1",
+    "@vercel/speed-insights": "^1.1.0",
+    "framer-motion": "^11.3.28",
+    "gsap": "^3.12.5",
+    "locomotive-scroll": "^5.0.0-beta.21",
+    "next": "^14.2.13",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-parallax-tilt": "^1.7.244",
+    "react-vertical-timeline-component": "^3.6.0",
+    "sass": "^1.77.8",
+    "three": "^0.169.0",
+    "typewriter-effect": "^2.21.0"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5"
+  }
+}

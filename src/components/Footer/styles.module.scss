@@ -1,0 +1,85 @@
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+    padding: 20px;
+    color: white;
+    
+    @media (max-width: 540px) {
+        margin-top: 5px;
+        flex-direction: column-reverse;
+    }
+    
+    @media (max-width: 1024px) {
+        margin-top: 50px;
+    }
+
+    :nth-child(1){
+        margin-top: 10px;
+    }
+    
+    div{
+        display: flex;
+        gap: 10px;
+        align-items: flex-end;
+
+        .stripe{
+            display: none;
+            width: 90%;
+            height: 1px;
+            background-color: gray;
+            position: absolute;
+            margin-bottom: -15px;
+            @media (max-width: 540px) {
+                display: block;
+            }
+        }
+
+        p, h3{
+            margin: 0px;
+            padding: 2.5px;
+            cursor: pointer;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            
+            &::after{
+                content: "";
+                width: 0%;
+                height: 1px;
+                background-color: white;
+                display: block;
+                margin-top: 2px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: width 0.2s linear;
+            }
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+        span{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        h3{
+            color: grey;
+            cursor: default;
+            font-weight: 300;
+            font-size: 1em;
+        }
+    }
+    
+}
+
+.mt100{
+    margin-top: 100px;
+    @media (max-width: 540px) {
+        margin-top: 10px;
+    }
+}

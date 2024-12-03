@@ -1,0 +1,117 @@
+.aboutExperience{
+    position: relative;
+    display: flex;
+    height: 100%;
+    font-family: "Signika", sans-serif;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    
+    @media (max-width: 1024px) { padding-bottom: 200px; }
+    @media (max-width: 900px) { padding-bottom: 200px; }
+    @media (max-width: 768px) { padding-bottom: 200px; }
+
+    .body{
+        margin-left: 300px;
+        margin-right: 300px;
+        position: relative;
+        width: 100vw;
+
+        @media (max-width: 1024px) {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        @media (max-width: 900px) {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        @media (max-width: 768px) {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        @media (max-width: 540px) {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .sectionSubText{
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .sectionHeadText{
+            font-size: 40px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .timelineContainer{
+            display: flex;
+            flex-direction: column;
+            margin-top: 5rem;
+
+            .experienceIcon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                .image{
+                    object-fit: contain;
+                    width: 60%;
+                    height: 60%;
+                }
+            }
+
+            .experienceCard{
+                
+                h3{
+                    color: black;
+                    font-weight: 700;
+                    font-size: 28px;
+                    margin: 0px;
+                }
+                
+                p{
+                    font-size: 20px;
+                    margin: 0px;
+                    line-height: 2;
+                    font-weight: 500;
+                    color: black;
+                    opacity: 0.7;
+                }
+
+                ul{
+                    margin-top: 1.25rem;
+                    list-style-type: disc;
+
+                    li{
+                        color: black;
+                        letter-spacing: 0.05em;
+                        font-size: 16px;
+                        padding-left: 0.25rem;
+                        opacity: 0.9;
+                    }
+                }
+            }
+
+        }
+
+        .techContainer{
+            padding-top: 50px;
+            padding-bottom: 100px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+
+            .techBall{
+                width: 7rem;
+                height: 7rem;
+            }
+        }
+    }
+}

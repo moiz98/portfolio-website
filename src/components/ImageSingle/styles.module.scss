@@ -1,0 +1,64 @@
+.imageSingle{
+    background-color: #f1f2f6 !important;
+    opacity: 1;
+    padding: 0;
+    overflow: hidden;
+    margin-top: -1px;
+    background: white;
+    display: block;
+    position: relative;
+
+    .container{
+        margin: 0 auto;
+        max-width: 100em;
+
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+
+            .flexCol{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                order: 2;
+                position: relative;
+
+                .imageLaptop{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80%;
+                    height: 80vh;
+                    overflow: hidden;
+                    
+                    @media (max-width: 1024px) { height: 45vh; }
+                    @media (max-width: 900px) { height: 40vh; }
+                    @media (max-width: 768px) { height: 40vh; }
+                    @media (max-width: 540px) { height: 35vh; }
+                    video {
+                        position: absolute;
+                        top: 13%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 80%;
+                        z-index: 1;
+                        border-radius: 5px;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    }
+                    
+                    .Image{
+                        position: absolute;
+                        top: 13%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 63%;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,104 @@
+.aboutServices{
+    position: relative;
+    display: flex;
+    height: 100%;
+    font-family: "Signika", sans-serif;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: rgb(240, 240, 241);
+
+    @media (max-width: 1024px) { padding-top: 0px; }
+    @media (max-width: 900px) { padding-top: 0px; }
+    @media (max-width: 768px) { padding-top: 0px; }
+    @media (max-width: 540px) { padding-top: 0px; }
+
+    .body{
+        margin-left: 300px;
+        margin-right: 300px;
+        position: relative;
+        width: 100vw;
+
+        @media (max-width: 1024px) {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        @media (max-width: 900px) {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        @media (max-width: 768px) {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        @media (max-width: 540px) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            
+            .loading {
+                font-size: 2em;
+                font-weight: bold;
+                display:inline-block;
+                opacity: 0.5;
+                clip-path: inset(0 2ch 0 0);
+                animation: l 2s steps(4) infinite;
+            }
+                
+            @keyframes l {
+                to {
+                    clip-path: inset(0 -1ch 0 0)
+                }
+            }
+        }
+
+        .cardContainer{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 1.2em;
+            .card{
+                width: 100%;
+                
+                @media (min-width: 450px) {
+                    width: 300px;
+                }
+
+                .cardBorder{
+                    opacity: 1;
+                    transform: none;
+                    background: linear-gradient(to right, rgb(197, 197, 197), rgb(29, 29, 29));
+                    box-shadow: var(0 0 #0000, 0 0 #0000), var(0 0 #0000, 0 0 #0000), var(0px 35px 120px -15px #211e35);
+                    padding: 1px;
+                    border-radius: 20px;
+                    width: 100%;
+
+                    .cardBody{
+                        padding-top: 1.25rem;
+                        padding-bottom: 1.25rem;
+                        padding-left: 3rem;
+                        padding-right: 3rem;
+                        background-color:  rgb(240, 240, 241);
+                        border-radius: 20px;
+                        justify-content: space-evenly;
+                        display: flex;
+                        flex-direction: column;
+                        min-height: 300px;
+
+                        .stripe{
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: rgba(28, 29, 32, 0.175)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,76 @@
+.imageComputer{
+    opacity: 1;
+    padding: 0;
+    overflow: hidden;
+    margin-top: -1px;
+    display: block;
+    position: relative;
+
+    .container{
+        margin: 0 auto;
+        max-width: 100em;
+
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+
+            .flexCol{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                order: 2;
+                position: relative;
+
+                .imageLaptop{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80%;
+                    height: 80vh;
+                    overflow: hidden;
+
+                    @media (max-width: 1024px) { height: 50vh; }
+                    @media (max-width: 900px) { height: 40vh; }
+                    @media (max-width: 768px) { height: 50vh; }
+                    @media (max-width: 540px) { height: 40vh; }
+                
+                    .computerBorder {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 80%;
+                        overflow: hidden;
+                        z-index: 2;
+                        filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));
+
+                        @media (max-width: 1024px) { top: 40%; }
+                        @media (max-width: 900px) { top: 44%; }
+                        @media (max-width: 768px) { top: 40%; }
+                        @media (max-width: 540px) { top: 35%; }
+                    }
+                
+                    video {
+                        position: absolute;
+                        top: 13%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 63%;
+                        z-index: 1;
+                    }
+                    .Image{
+                        position: absolute;
+                        top: 13%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 63%;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+

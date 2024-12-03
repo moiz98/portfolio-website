@@ -1,0 +1,55 @@
+.project{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    border-top: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    transition: all 0.2s;
+
+    a{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        
+        h2{
+            font-size: 60px;
+            margin: 0px;
+            font-weight: 400;
+            transition: all 0.4s;
+            width: 50%;
+        }
+    
+        p{
+            transition: all 0.4s;
+            font-weight: 300;
+            width: 20%;
+            text-align: start;
+            
+            &:nth-last-child(1){
+                width: 10%;
+                text-align: end;
+            }    
+        }
+    }
+
+    &:last-of-type{
+        border-bottom: 1px solid rgb(201, 201, 201);
+    }
+
+    &:hover{
+        opacity: 0.5;
+
+        h2{
+            transform: translateX(-10px);
+        }
+
+        p{
+            transform: translateX(10px);
+        }
+    }
+}
