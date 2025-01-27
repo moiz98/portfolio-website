@@ -36,7 +36,7 @@ Make sure you have the following installed:
 ### Installation  
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/yourusername/portfolio-website.git  
+   git clone https://github.com/moiz98/portfolio-website.git  
 2. Navigate to the project directory:
     ```bash
     cd portfolio-website  
